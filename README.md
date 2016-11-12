@@ -6,4 +6,4 @@ Its working when user interact with browser page submit simultaneously very well
 When increase the number of concurrent request to 50 within total 200 request with command line tool [Hey](https://github.com/rakyll/hey) then
 both are hanging and not respond.
 
-![Image](https://raw.githubusercontent.com/gencebay/NetCoreSmallLoadRepro/master/repronetcore.gif)
+![Image](https://github.com/gencebay/NetCoreSmallLoadRepro/blob/master/ReproNetCore.gif)
