@@ -3,12 +3,20 @@ WebClient consumes backend APIs over Backend.Hosting with 5010 port and Backend.
 to the WebClient.
 
 Its working when user interact with browser page submit simultaneously very well!
-When increase the number of concurrent request to 50 within total 200 request with command line tool [Hey](https://github.com/rakyll/hey) then
-both are hanging and not respond.
+When increase the number of concurrent request to 50 within total 200 request with command line tool [Hey](https://github.com/rakyll/hey):
 
-###Test Environment:
-IIS 10,
-Windows 10 Pro Version 1607
-i7 2.40GHz 4 Cores, 240 GB SSD Hard Disc, 32GB RAM 
+## Consequences
+
+### IIS 10 - On **Different** Application Pool *No Managed
+	Average 50 out of 200 requests are as response HTTP 500
+
+### IIS 10 - On **Same** Application Pool *No Managed
+	 Both are hanging and not respond for a long time then tool (hey) result says 200 post request error timeout
+
+### Test Environments:
+	Windows 10 Pro Version 1607
+	i7 2.40GHz 4 Cores
+	240 GB SSD Hard Disc
+	32GB RAM 
 
 ![Image](https://github.com/gencebay/NetCoreSmallLoadRepro/blob/master/ReproNetCore.gif)
