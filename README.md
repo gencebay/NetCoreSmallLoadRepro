@@ -7,10 +7,10 @@ When increase the number of concurrent request to 50 within total 200 request wi
 
 ## Consequences
 
-### IIS 10 - On **Different** Application Pool *No Managed
+### IIS 10 - Client and API on **different** application pool and on same machine (No Managed Code)
 	Average 50 out of 200 requests are as response HTTP 500
 
-### IIS 10 - On **Same** Application Pool *No Managed
+### IIS 10 - Client and API on **same** application pool and on same machine (No Managed Code)
 	 Both are hanging and not respond for a long time then tool (hey) result says 200 post request error timeout
 
 ### Test Environments:
